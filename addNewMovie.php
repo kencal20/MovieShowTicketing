@@ -1,6 +1,7 @@
 <?php
 include 'inc/header.php';
 
+session_start();
 //Retrieve data from Category table into <Select>
 $sql = "Select * from  movie_categories;";
 $exec = mysqli_query($con, $sql);
