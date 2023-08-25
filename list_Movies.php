@@ -36,7 +36,7 @@
                     <td><?php echo $movie['Title']; ?></td>
                     <td><?php echo $movie['Category_ID']; ?></td>
                     <td>
-                        <img height="150" width="300" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
+                        <img height="250" width="300" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
                     </td>
                     <td>
                         <a href="edit_movie.php?edit=<?php echo $movie['Movie_ID']; ?>" class="btn btn-success">Edit</a>

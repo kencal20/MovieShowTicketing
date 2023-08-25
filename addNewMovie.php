@@ -1,7 +1,6 @@
 <?php
 include 'inc/header.php';
 
-session_start();
 //Retrieve data from Category table into <Select>
 $sql = "Select * from  movie_categories;";
 $exec = mysqli_query($con, $sql);
@@ -63,7 +62,7 @@ if (isset($_POST['add_NewMovie'])) {
 
   // End of pic validation
   //add data to movie table
-  $sql2 = "UPDATE movie set Category_ID= $m_cat, picture='$target_dir' WHERE Mocie_ID= ) VALUES (?, ?, ?, ?)";
+  $sql2 = "INSERT INTO movies (Movie_ID, Title, Category_ID, Picture) VALUES (?, ?, ?, ?)";
 
   $stmt = mysqli_prepare($con, $sql2);
   mysqli_stmt_bind_param($stmt, "ssss", $m_id, $m_name, $m_cat, $target_dir);
