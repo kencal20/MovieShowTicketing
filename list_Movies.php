@@ -19,7 +19,8 @@
         <a class="btn btn-primary" href="addNewMovie.php">CREATE NEW MOVIE</a>
         <br>
         <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+            <thead class="bg-dark text-light
+            ">
                 <tr>
                     <th>Movie_ID</th>
                     <th>Title</th>
@@ -35,11 +36,11 @@
                     <td><?php echo $movie['Title']; ?></td>
                     <td><?php echo $movie['Category_ID']; ?></td>
                     <td>
-                        <img height="200" width="300" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
+                        <img height="150" width="300" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
                     </td>
                     <td>
-                        <a href="edit_movie.php" ?edit=<?php echo $movie['Movie_ID']; ?> class="btn btn-success">Edit</a>
-                        <a class="btn btn-danger" href="Delete_movie.php" ?delete=<?php echo $movie['Movie_ID']; ?>>Delete</a>
+                        <a href="edit_movie.php?edit=<?php echo $movie['Movie_ID']; ?>" class="btn btn-success">Edit</a>
+                        <a class="btn btn-danger" href="Delete_movie.php?delete=<?php echo $movie['Movie_ID']; ?>">Delete</a>
                     </td>
                 </tr>
             <?php endforeach ?>
