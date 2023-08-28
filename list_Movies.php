@@ -32,13 +32,13 @@
 
             <?php foreach ($result as $movie) : ?>
                 <tr>
-                    <td><?php echo $movie['Movie_ID']; ?></td>
-                    <td><?php echo $movie['Title']; ?></td>
-                    <td><?php echo $movie['Category_ID']; ?></td>
-                    <td>
-                        <img height="250" width="300" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
+                    <td width=20%><?php echo $movie['Movie_ID']; ?></td>
+                    <td width=20%><?php echo $movie['Title']; ?></td>
+                    <td width=20%><?php echo $movie['Category_ID']; ?></td>
+                    <td width=20%>
+                        <img height="250" width="200" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
                     </td>
-                    <td>
+                    <td width=20%>
                         <a href="edit_movie.php?edit=<?php echo $movie['Movie_ID']; ?>" class="btn btn-success">Edit</a>
                         <a class="btn btn-danger" href="Delete_movie.php?delete=<?php echo $movie['Movie_ID']; ?>">Delete</a>
                     </td>

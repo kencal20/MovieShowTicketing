@@ -16,7 +16,7 @@ $ms_venue = FILTER_INPUT(INPUT_POST, 'ms_venue', FILTER_SANITIZE_SPECIAL_CHARS);
 
 
 //Create Show
-$sql2 = "insert into  movie_show(show_Name,Movie_ID,Venue,Show_Date,DateShowCreate) values('$ms_name','$movietoshow','$ms_date','$ms_venue',CURDATE())";
+$sql2 = "insert into  movie_show(show_Name,Movie_ID,Venue,Show_Date,DateShowCreate) values('$ms_name','$movietoshow','$ms_date','$ms_venue')";
 //var_dump($sql2);
 if (mysqli_query($con, $sql2)) {
     echo 'Added';
