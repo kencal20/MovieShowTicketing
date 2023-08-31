@@ -32,21 +32,31 @@
 
             <?php foreach ($result as $movie) : ?>
                 <tr>
-                    <td width=20%><?php echo $movie['Movie_ID']; ?></td>
-                    <td width=20%><?php echo $movie['Title']; ?></td>
-                    <td width=20%><?php echo $movie['Category_ID']; ?></td>
-                    <td width=20%>
-                        <img height="250" width="200" src="<?php echo $movie['picture']; ?>" alt="Movie Poster">
-                    </td>
-                    <td width=20%>
-                        <a href="edit_movie.php?edit=<?php echo $movie['Movie_ID']; ?>" class="btn btn-success">Edit</a>
-                        <a class="btn btn-danger" href="Delete_movie.php?delete=<?php echo $movie['Movie_ID']; ?>">Delete</a>
-                    </td>
-                </tr>
-            <?php endforeach ?>
+            
+            <td> <?php echo $movie['Movie_ID']; ?> </td>
+            <td><?php echo $movie['Title']; ?> </td>
+            <td><?php echo $movie['Category_ID']; ?> </td>
+            <td> <img src="<?php echo $movie['picture']; ?>" width="70px" /> </td>
+            <td>
+              <a href="edit_movie.php?edit=<?php echo $movie['Movie_ID']; ?>">
+               <button class="btn btn-primary px-3" type="button">
+                  Edit
+               </button>
+              </a>
+
+              <a href="delete_Movie.php?delete=<?php echo $movie['Movie_ID']; ?>">
+               <button class="btn btn-danger px-3" type="button" 
+               onclick="return confirm('Are you sure you want to delete')"> 
+                   Delete
+                </button>
+              </a>
+            </td>
+
+        </tr>
+    <?php endforeach ?>
 
         </table>
-        <input type="button" value="print" onclick="window.print()" />
+
     </div>
 
     <?php
