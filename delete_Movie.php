@@ -6,7 +6,6 @@
     $msg = '';
 
     $sql = "delete from movies where movie_ID='$delete'";
-    var_dump($sql);
     if(mysqli_query($con, $sql))
     {
       $msg ='Record deleted Successfully';
